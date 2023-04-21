@@ -1,0 +1,42 @@
+#soma
+soma = 10 + 15
+soma
+soma = 10.75 + 9.25
+soma
+#subtração
+sub = 50 - 37
+sub
+sub = 10.88 - 9.74
+sub
+
+#multiplicação
+mult = 4*5
+mult
+
+#divisão
+div = 10/5
+div
+div = 4/2
+div
+
+#divisão inteira
+div = 3/2
+div
+divinteira = 3//2
+divinteira
+div = 5/2
+div
+divinteira = 5//2
+divinteira
+
+#exponenciação
+exp = 5**5
+exp
+mult = 5*5*5*5*5
+mult
+
+#resto (mod)
+mod = 6%3
+mod
+mod = 5%2
+mo
