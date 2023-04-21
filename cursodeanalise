@@ -1,0 +1,27 @@
+#variáveis numéricas
+
+a = 10
+
+a
+
+type(a)
+
+b = 2.5
+
+b
+
+#Variável string
+
+a = "ola, meu nome é joel"
+
+a
+
+#variável Lógica/ Booleana
+
+c = 4>5
+
+c
+
+d = 5>4
+
+d
