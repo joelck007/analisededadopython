@@ -1,0 +1,49 @@
+#Loop In range
+
+for valor in range (0,21):
+    print(valor)
+
+#Loop em uma Lista
+
+frutas = ['maçã','banana','abacaxi','melão','morango']
+
+for x in frutas:
+    print(x)
+
+#Dicionário
+
+cadastro = {'nome':'joel','idade':29,'sexo':'masculino'}
+
+for chave in cadastro:
+    print(chave)
+
+for valor in cadastro.values():
+    print(valor)
+
+for chave,valor in cadastro.items():
+    print(chave,valor)
+
+#Tupla
+
+tupla = (1,2,3,4,5,6)
+
+for elemento in tupla:
+    print(elemento)
+
+#Break
+
+for valor in range (0,10):
+    print(valor)
+
+for valor in range(0,10):
+    if valor ==7:
+        break
+    print(valor)
+
+#Continue
+
+for valor in range(0,21):
+    if (valor == 5 or valor == 10 or valor ==15 or valor ==20):
+        continue
+    print(valor)
+
