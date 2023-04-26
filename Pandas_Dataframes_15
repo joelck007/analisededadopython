@@ -1,0 +1,41 @@
+import pandas as pd
+import numpy as np
+
+#Criação de DataFarmes a partir de um array
+
+arr = np.random.randint(10,55,size=(4,4))
+
+arr
+
+df1 = pd.DataFrame(data=arr,index=['A','B','C','D'] ,columns =['W','X','Y','Z'])
+
+df1
+
+#Criação de DataFrames a partir de litas
+
+lista = [[10,20,30,40,50,],[60,70,80,90,100],[110,120,130,140,150]]
+
+df2 = pd.DataFrame(data=lista,index=['A','B','C',],columns=['V','W','X','Y','Z'])
+
+df2
+
+#Criação de DataFrames através de um dicionário
+
+dados = {'Produtos':['Play 5','PC Gamer','Teclado Mecânico','Mouse Gamer','Microfone com led'], 'Preço':[5000.00,2500.00,120.00,60.00,80.00]}
+
+dados
+
+df3 = pd.DataFrame(data=dados)
+
+df3
+
+#Criando uma nova coluna
+
+df3['custo'] = [3000,1500,80,30,50.5]
+
+df3
+
+df3['Lucro'] = df3['Preço'] - df3['custo']
+
+df3
+
