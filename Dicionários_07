@@ -1,0 +1,72 @@
+cadastro = {'nome':'joão','idade':30,'sexo':'masculino'}
+
+cadastro
+
+type(cadastro)
+
+cadastro['nome']
+
+cadastro['idade']
+
+#Métodos do dicionário
+
+'joão' in cadastro
+
+'joão' in cadastro
+
+'joão' in cadastro.values()
+
+'nome' in cadastro
+
+'nome' in cadastro.keys()
+
+('nome', 'joão') in cadastro.items()
+
+#Alterando valores do dicionário
+
+cadastro['nome'] = 'pedro'
+
+cadastro
+
+#Adicionar valores
+
+cadastro['altura'] = 1.77
+
+cadastro
+
+#Remover valores
+
+del (cadastro['sexo'])
+
+cadastro
+
+#Copiando dicionários
+
+cadastro
+
+cadastro_igual = cadastro
+
+copia = cadastro.copy()
+
+cadastro_igual
+
+copia
+
+cadastro['idade'] = 98
+
+cadastro
+
+cadastro_igual
+
+copia
+
+#Juntando dicionários
+
+meus_contatos = {'joel':'9999-9999','Felipe':'8888-8888','Raul':'7777-7777'}
+
+seus_contatos = {'fabiana':'6666-6666','ana':'5555-5555', 'livia':'4444-4444'}
+
+meus_contatos.update(seus_contatos)
+
+meus_contatos
+
