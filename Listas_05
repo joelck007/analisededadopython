@@ -1,0 +1,100 @@
+#Listas
+
+frutas = ['mança','laranja', 'banana', 'abacaxi']
+
+frutas
+
+type(frutas)
+
+#Acessando elemnentos da lista
+
+frutas[2]
+
+frutas[0]
+
+frutas[1:3]
+
+frutas[:]
+
+frutas=['mançã', 'laranja', 'banana', 'abacaxi', 'abacate', 'limão']
+
+frutas[1:3]
+
+frutas[1:4]
+
+frutas [2:]
+
+frutas[:5]
+
+frutas[-3]
+
+lista = ['sim','não', 'sim', 'não', 'sim', 'não']
+
+lista[:]
+
+lista[0:7]
+
+lista[0:7:2]
+
+lista[::2]
+
+#testando se um valor está na lísta
+
+frutas=['mançã', 'laranja', 'banana', 'abacaxi', 'abacate', 'limão']
+
+'mançã' in frutas
+
+'melancia' in frutas
+
+#juntar listas
+
+frutas2 = ['melancia', 'morango', 'manga']
+
+frutas3 = frutas + frutas2
+
+frutas3
+
+#listas dentro de listas
+
+lista = [1,2,3,'alvo',20]
+
+lista[3]
+
+lista = [1,2,3,[10,'alvo',15],18,20]
+
+lista[3]
+
+lista[3][1]
+
+lista = [1,2,3,[10,2,[2,4,'alvo']],25,23]
+
+lista[3]
+
+lista[3][2]
+
+lista[3][2][2]
+
+#Como alterar valores de uma lista
+
+lista=[2,4,6,8]
+
+lista[1]=5
+
+lista
+
+lista [:] = ['mudei', 'mudei', 'mudei', 'mudei']
+
+lista
+
+# Atribuir e excluir valores
+
+lista=[2,4,6,8]
+
+lista.append(10)
+
+lista
+
+del(lista[2])
+
+lista
+
