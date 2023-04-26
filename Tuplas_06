@@ -1,0 +1,26 @@
+lista = [1,2,3,4]
+
+tupla = (1,2,3,4)
+
+del(lista[2])
+
+lista
+
+lista.append(100)
+
+lista
+
+tupla.append(100)
+
+del(tupla[2])
+
+tupla
+
+tupla[2]
+
+tupla[:]
+
+tupla[:2]
+
+tupla[2:]
+
