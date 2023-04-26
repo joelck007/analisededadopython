@@ -1,0 +1,37 @@
+import numpy as np
+
+a = 40
+b = 70
+
+a>b
+
+cadastro = np.random.randint(15,51,size=(50,10))
+
+cadastro
+
+cadastro_maior18 = cadastro > 18
+
+cadastro_maior18
+
+arr3 = cadastro[cadastro_maior18]
+
+arr3 = cadastro[cadastro>18]
+
+len(arr3)
+
+cadastro_maior18.sum()
+
+cadastro[2]
+
+arr4 = cadastro[cadastro>25]
+
+arr4
+
+len(arr4)
+
+condicao = (cadastro>20)
+
+extraido = np.extract(condicao,cadastro)
+
+extraido
+
