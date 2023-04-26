@@ -1,0 +1,36 @@
+while (condição):
+     bloco de ação
+     
+     iterador
+     
+    
+
+print(1)
+print(2)
+print(3)
+print(4)
+
+cont = 1
+while (cont<=50):
+    print(cont)
+    cont = cont + 1
+
+
+#break
+
+cont = 0
+while (cont<=10):
+    print(cont)
+    if (cont == 7):
+        break
+    cont = cont + 1
+
+#continue
+
+cont = 0
+while (cont<10):
+    cont = cont + 1
+    if (cont == 7):
+        continue
+    print(cont)
+
