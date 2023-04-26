@@ -1,0 +1,62 @@
+import pandas as pd
+import numpy as np
+
+#Series a partir de uma lista
+
+lista = [10,20,30,40,50]
+
+series1 = pd.Series(lista)
+
+series1
+
+series1[1]
+
+#Serie a partir dde um dicionário
+
+dicionario = {'telefone':'9999-9999', 'telefone2':'8888-8888', 'telefone3':'7777-7777'}
+
+series2 =pd.Series(dicionario)
+
+series2
+
+series2[2]
+
+series2['telefone3']
+
+#Series a partir de um array
+
+arr = np.array([10,20,30,40,50,60])
+
+arr
+
+series3 = pd.Series(arr)
+
+series3
+
+series4 = pd.Series([10,20,30,40,50])
+
+series4
+
+lista = [100,200,300,400,500,600]
+
+series4 = pd.Series(lista)
+
+series4
+
+series5 = pd.Series([1,2,3,4],index=['Brasil','Estados Unidos','Coréia do Sul','Japão'])
+
+series5
+
+lista = [10,20,30,40]
+labels = ['Brasil','Estados Unidos','Coréia do Sul','Japão']
+
+series6 = pd.Series(data=lista,index=labels)
+
+series6
+
+series7 = pd.Series(data=[2,4,5,8],index=['Brasil','Estados Unidos','Coréia do Sul','París'])
+
+series7
+
+series7+series6
+
