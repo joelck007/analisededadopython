@@ -1,0 +1,70 @@
+#Importar a biblioteca "(as) no numpy é apelido para facilitar na escrita do comando"
+import numpy as np
+
+#Array a partir de uma Lista
+
+qtde = [2,5,10,20,35]
+custo = [100,150,450,320,195]
+
+arr1 = np.array(qtde)
+
+arr2 = np.array(custo)
+
+estoque = qtde*custo
+
+estoque = arr1*arr2
+
+estoque
+
+custo = [100,200,300,400]
+venda = [125,235,355,490]
+
+arr3 = np.array(custo)
+arr4 = np.array(venda)
+
+lucro = arr4 - arr3
+
+lucro
+
+# Array a partir do Numpy
+
+# arange()
+
+np.arange(10,20)
+
+np.arange(10,21,2)
+
+np.arange(10,101,2,dtype=float)
+
+#Linspace()  ele é pra deixar todos os elementos com mesmo espaço entre eles
+
+np.linspace(0,1,10)
+
+np.linspace(1,10,10)
+
+#Random 
+#rand (ele vai criar um arrays com discrição uniforme basicamente vai criar numeros aleatorios entre 0 e 1),
+#randn (ele vai criar um arrays com discrição normal com média 0 e variância 1 ),
+#randint (ele vai retornar valores inteiros aleatórios )
+
+np.random.rand(10)
+
+np.random.randn(15)
+
+np.random.randint(10,100,30)
+
+arr = np.random.randint(10,100,30)
+
+arr
+
+len(arr)
+
+#Zeros e uns (como saber se é dimensão ou bidimensional? 
+#R: com numeros de colchete se é dimensional é 1 indices e bidimensional 2 indices uma coluna e uma linha como uma matrix)
+
+np.zeros((5,4))
+
+np.ones((5,5))
+
+np.eye(6)
+
