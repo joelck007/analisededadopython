@@ -1,0 +1,32 @@
+idade_joao = 19
+idade_maria = 20
+
+if( idade_joao > idade_maria ):
+    print('joão é mais velho que maria')
+else:
+    print('maria é mais velha que joão')
+
+idade_joao = 19
+idade_maria = 20
+idade_pedro = 23
+
+if(idade_joao > idade_maria and idade_joao > idade_pedro):
+    print("joão é o mais velho de todos")
+elif(idade_maria > idade_joao and idade_maria > idade_pedro):
+    print('maira é mais velha de todos')
+else:
+    print('pedro é mais velho de todos')
+
+#Criança, adolescente, Adulto e Idoso
+
+idade = 30
+
+if(idade <=13):
+    print('é criança')
+elif(idade >=14 and idade <18):
+     print('é adolescente')
+elif(idade >=18 and idade <60):
+    print('é adulto')
+else:
+    print('é idoso')
+
