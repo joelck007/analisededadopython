@@ -1,0 +1,38 @@
+lista = [1100,90000,50,650,800,10,30000]
+
+max(lista)
+
+min(lista)
+
+len(lista)
+
+type(lista)
+
+def tr ():
+    traços = print('-='*50)
+    return traços
+
+tr()
+
+salarios = [1290,3250,2890,4130,1554]
+
+map(função,iterável)
+
+# 1° - Função método tradicional
+
+def vezes_vc (x):
+    y = x + (x*0.25)
+    return y
+
+salarios_atual = map (vezes_vc,salarios)
+
+print(list(salarios_atual))
+
+# 2° - Função lambda é pra agilizar "em vez de fazer 4 linhas, você faz em um"
+
+salarios
+
+salarios_atual = map(lambda x: x+(x*0.25),salarios)
+
+print(list(salarios_atual))
+
