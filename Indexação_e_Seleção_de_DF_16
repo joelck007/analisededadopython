@@ -1,0 +1,89 @@
+import pandas as pd
+import numpy as np
+#os valores aleatórios seja iguais
+np.random.seed(100)
+
+# indices dos meses de 31 dias só mente
+
+indices = ['Janeiro', 'Março', 'Maio', 'Julho', 'Agosto', 'Outubro', 'Dezembro']
+
+colunas =  np.arange(1,32)
+
+colunas
+
+dados = np.random.randint(492,2050,size=(7,31))
+
+dados
+
+df = pd.DataFrame(data=dados, index = indices, columns = colunas)
+
+df
+
+      df[coluna] você pode selecionar uma coluna
+
+      df[[col1,col2,col3]] Você pode selecionar varias colunas
+
+      df[coluna][linha] vocÊ pode selecionar 1 coluna e 1 linha
+
+      df[linha1:linha2] [2:][0]2:5] quando usa : tenho que explicar qual linha eu selciono até linha querendo finalizar
+      
+      df.loc[indice linha, indice coluna] df.loc['julho', 30] loc= localizando linha e coluna
+      
+      df.iloc[ ind num linha, ind num coluna] df.iloc[3,30] iloc = localizando por numero
+      
+      df.loc[[ind1,ind2,in3][col1,col2,col3]] tanto faz o loc quanto iloc os dois para quantidade linhas e colunas 
+
+#Qunanto vendeu no dia 10 de todos os meses?
+
+df[10]
+
+#Quanto vendeu nos dias 10,20,30 de todos os meses?
+
+df[[10,20,30]]
+
+#Quanto vendeu no dia 15 de março?
+
+df[15]
+
+df[15]['Março']
+
+#Quntos vendeu nos meses de Janeiro,Março e Maio?
+
+df[0:3] #0 1 2 -> 0:3
+
+#Quanto vendeu nos meses de Julho,Agosto e Outubro nos dias 25 a 31? 
+
+ df.loc[['Julho','Agosto','Outubro'],[25,26,27,28,29,30,31]] # no loc é nome na da linha q é 31
+
+df.iloc[[3,4,5],[24,25,26,27,28,29,30]] # no iloc é valor da linha que é 30 pq é uma valor a menos
+
+SELEÇÃO CONDICIONAL DE DATAFRAMES
+
+df
+
+df.rename({'Dezembro':'Dezembroo'},inplace=True) #Nome atual : Nome Futuro
+
+df
+
+#Quero saber em que dia as minhas vendas foram maior do que R$1000,00 ?
+
+df >1000
+
+df [df >1000]
+
+df[df >1000]. fillna('-') # fillna é preencher com valor q eu deixar no caso escolhi -
+
+#Quero saber em que dia as minhas vendas foram maior do que R$1000,00 em meses Janeiro, Março e Maio?
+
+df[df > 1000][0:3]
+
+df [df > 1000][:][[1,2,3,4,5]].fillna('-')
+
+df[condição][linhas][[colunas]]
+
+#Duas condições ( and = &) (or = |) fica assim df [(condição) & (condição)]
+
+df [(df[10] >1000) & (df[15] >1500)]
+
+df[(df[10]>100) | (df[15]>1500)]
+
