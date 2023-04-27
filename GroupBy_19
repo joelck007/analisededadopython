@@ -1,0 +1,47 @@
+import pandas as pd
+import numpy as np
+
+#DATAFRAME DF
+
+data = {'Sede':['SP','SP','MG','MG','RJ','RJ','ES','ES'],
+       'Vendedor':['Jorge','Ana','Tiago','Pedro','Raphaela','Guto','Maria','Carolina'],
+       'Vendas':[2000,2500,3100,1200,1500,3900,2900,3900]}
+df = pd.DataFrame(data)
+
+df
+
+df.groupby('Sede')
+
+by_sede = df.groupby('Sede')
+
+by_sede
+
+by_sede.max()
+
+by_sede.mean()
+
+by_sede.describe()
+
+by_sede.describe().transpose()
+
+by_sede.describe().transpose()['SP']
+
+#DATAFRAME MULTIINDEX DF1
+
+arrays = [['São Paulo', 'São Paulo', 'Rio de Janeiro', 'Rio de Janeiro','Minas Gerais','Minas Gerais'],
+['Garrafas','Copos','Garrafas','Copos','Garrafas','Copos' ]]
+index = pd.MultiIndex.from_arrays(arrays, names=('Estado', 'Produto'))
+df1 = pd.DataFrame({'Total Vendido R$': [10000, 35000, 22400, 12890,10880,13900]},index=index)
+
+df1
+
+mult_bysede = df1.groupby('Estado',level=0)
+
+mult_bysede.mean()
+
+mult_bysede.max()
+
+mult_byproduto = df1.groupby('Produto',level=1)
+
+mult_byproduto.mean()
+
