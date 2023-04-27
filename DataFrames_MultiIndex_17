@@ -1,0 +1,57 @@
+import pandas as pd
+import numpy as np
+
+lista = [['BRASIL','BRASIL','BRASIL','CORÉIA DO SUL','CORÉIA DO SUL','CORÉIA DO SUL',],[2021,2022,2023,2021,2022,2023]]
+
+tuplas = zip(*lista) #zip ele junta o primerio index da primeria lista com primero index da segunda lista
+
+tuplas
+
+tuplas = list(tuplas)
+
+tuplas
+
+multi = pd.MultiIndex.from_tuples(tuplas)
+
+multi
+
+df1 = pd.DataFrame(data = np.random.randn(6,2),index = multi,columns = ['EXP TRIGO','EXP ARROZ'])
+
+df1
+
+df1.index.names=['PAÍS','ANO']
+
+df1
+
+#Encontrando valores
+
+df1['EXP ARROZ']
+
+df1.loc['BRASIL']
+
+#xs cross-section que é uma sessão do dataframe, assim posso especificar o nivel que eu quero
+
+df1.xs(2021, level=1)
+
+df1[:2]
+
+df1
+
+df1[:5]
+
+df1[:]
+
+df1[['EXP TRIGO','EXP ARROZ']]
+
+#Vendo o DataFrame de outra maneira (usando uma função de unstack)
+
+df1.unstack()
+
+df2 = df1.unstack()
+
+df2
+
+df2['EXP TRIGO']
+
+df2.xs(2021,axis=1,level=1)
+
