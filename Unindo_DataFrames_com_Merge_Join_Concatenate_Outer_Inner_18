@@ -1,0 +1,96 @@
+import pandas as pd
+import numpy as np
+np.random.seed(100)
+
+df1 = pd.DataFrame({'A': ['A0', 'A1', 'A2', 'A3'],
+                   'B' : ['B0', 'B1', 'B2', 'B3'],
+                   'C' : ['C0', 'C1', 'C2', 'C3'],
+                   'D' : ['D0', 'D1', 'D2', 'D3']},
+                   index=[0, 1, 2, 3])
+
+df2 = pd.DataFrame({'A': ['A4', 'A5', 'A6', 'A7'],
+                   'B' : ['B4', 'B5', 'B6', 'B7'],
+                   'C' : ['C4', 'C5', 'C6', 'C7'],
+                   'D' : ['D4', 'D5', 'D6', 'D7']},
+                   index=[4, 5, 6, 7])
+
+df3 = pd.DataFrame({'A': ['A8', 'A9', 'A10', 'A11'],
+                   'B' : ['B8', 'B9', 'B10', 'B11'],
+                   'C' : ['C8', 'C9', 'C10', 'C11'],
+                   'D' : ['D8', 'D9', 'D10', 'D11']},
+                   index=[8, 9, 10, 11])
+
+dicionario = {'ID' :[10,11,12,13,14],'NOME':[ 'Mario','Joana','Claudia','Lucas','Gabriel'],
+              'CIDADE':['SÃO PAULO','RIO DE JANEIRO','SÃO PAULO','CAMPINAS','PORTO ALEGRE']}
+dicionario2 = {'ID' :[16,11,12,13,18], 'Experiência' :['Junior', 'Senior', 'Pleno', 'Estagiário', 'Analista']}
+
+df4 = pd.DataFrame(data=dicionario)
+df5 = pd.DataFrame(data=dicionario2)
+
+#Concatenar (ele é melhor para verdical) 
+
+df1
+
+df2
+
+df3
+
+df_concat = pd.concat([df1,df2])
+
+df_concat
+
+df_concat = pd.concat([df1,df2,df3])
+
+df_concat
+
+ele não fica muito legal qunado é para o eixo horizontal um exemplo ai embaixo
+
+df_concat = pd.concat([df1,df2],axis=1)
+
+df_concat
+
+#merge inner (merge ele precisa identificar o ID e o modo com inner só tras o ID igual nas tabelas)
+
+df4
+
+df5
+
+merge_inner = pd.merge(df4,df5,)
+
+merge_inner
+
+#merge outer (merge ele precisa identificar o ID e o modo com outer ele tras todos os valore, e se não 
+# for iguais ele vai deixar os valores que trouxe a mais como nulos )
+
+merge_outer = pd.merge(df4,df5,how='outer')
+
+merge_outer
+
+#merge left (merge ele precisa identificar o ID e o modo com left o valores na direita que não for 
+# iguais ele vai deixar nulo)
+
+merge_left = pd.merge(df4,df5,how='left')
+
+merge_left
+
+#Join (não precisa de ID para identificar as tabelas)
+
+join_esq = df4.join(df5,lsuffix='_X',rsuffix='_Y')
+
+join_esq
+
+dicionario = {'NOME':[ 'Mario','Joana','Claudia','Lucas','Gabriel'],
+              'CIDADE':['SÃO PAULO','RIO DE JANEIRO','SÃO PAULO','CAMPINAS','PORTO ALEGRE']}
+dicionario2 = {'Experiência' :['Junior', 'Senior', 'Pleno', 'Estagiário', 'Analista']}
+
+df7 = pd.DataFrame(data=dicionario)
+df8 = pd.DataFrame(data=dicionario2)
+
+df7
+
+df8
+
+join_esq = df7.join(df8)
+
+join_esq 
+
